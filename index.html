@@ -334,6 +334,19 @@
 
   .divider { height: 1px; background: var(--border); margin: 4px 0 16px; }
 
+
+  /* ===== GUIDE ===== */
+  .rm-section { display:flex; align-items:center; gap:10px; margin:22px 0 12px; }
+  .rm-section-num { width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,var(--primary-dark),var(--primary)); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:900; color:white; flex-shrink:0; }
+  .rm-section-title { font-size:15px; font-weight:900; color:var(--text); }
+  .rm-section-sub { font-size:11px; color:var(--primary-light); margin-top:1px; }
+  .step-item { display:flex; gap:14px; margin-bottom:14px; }
+  .step-dot { width:8px; height:8px; border-radius:50%; background:var(--primary); margin-top:5px; flex-shrink:0; }
+  .step-body {}
+  .step-title { font-size:13px; font-weight:900; color:var(--text); margin-bottom:6px; }
+  .step-desc { font-size:12px; color:var(--text2); line-height:1.7; margin-bottom:8px; }
+  .step-action { font-size:11px; color:var(--text2); line-height:1.9; background:rgba(255,255,255,0.03); border-radius:8px; padding:10px; }
+
   /* ===== HIDDEN ===== */
   .hidden { display: none !important; }
 
@@ -355,6 +368,11 @@
   <p>進学ルートを選ぶだけで<br>今から準備すべき金額が一瞬でわかる</p>
 </div>
 
+
+<div class="tab-bar">
+  <div class="tab-btn active" onclick="switchTab(0)">📊 教育費シミュレーター</div>
+  <div class="tab-btn" onclick="switchTab(1)">📘 子どもNISAガイド</div>
+</div>
 
 <!-- ========== PAGE 1 ========== -->
 <div class="page active" id="page0">
@@ -543,6 +561,156 @@
 </div>
 
 
+<!-- ========== PAGE 2 ========== -->
+<div class="page" id="page1">
+
+  <!-- SECTION 1: 制度概要 -->
+  <div class="rm-section">
+    <div class="rm-section-num">1</div>
+    <div>
+      <div class="rm-section-title">子どもNISAとは？現在の制度を整理する</div>
+      <div class="rm-section-sub">まず現状を正確に理解しよう</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="step-item">
+      <div class="step-dot"></div>
+      <div class="step-body">
+        <div class="step-title">ジュニアNISAは2023年末に廃止された</div>
+        <div class="step-desc">かつて子ども専用の非課税口座「ジュニアNISA」がありましたが、2023年末で新規購入が終了。現在は親のNISAを活用して教育費を準備するのが主流です。</div>
+        <div class="step-action">✓ 2024年スタートの「新NISA」は18歳以上が対象<br>✓ 年間360万円まで非課税で投資できる（つみたて枠120万＋成長投資枠240万）<br>✓ 運用益・売却益が永久に非課税</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-dot"></div>
+      <div class="step-body">
+        <div class="step-title">新しい「子どもNISA」の創設が検討中</div>
+        <div class="step-desc">政府・金融庁が未成年向けの新しい非課税投資制度の検討を進めています。詳細が決まり次第、このガイドも更新予定です。現時点では親のNISAで準備するのがベストです。</div>
+        <div class="step-action">✓ 最新情報は金融庁の公式サイトで確認<br>✓ 制度が始まったタイミングで速やかに移行できるよう準備しておく</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: 何に投資するか -->
+  <div class="rm-section">
+    <div class="rm-section-num">2</div>
+    <div>
+      <div class="rm-section-title">何に投資すればいいか</div>
+      <div class="rm-section-sub">初心者はこれだけ覚えれば十分</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="step-item">
+      <div class="step-dot"></div>
+      <div class="step-body">
+        <div class="step-title">結論：インデックスファンド一択でOK</div>
+        <div class="step-desc">個別株・FX・仮想通貨は不要。世界中の優良企業にまとめて投資できる「インデックスファンド」を毎月コツコツ積み立てるだけ。これが最もシンプルで合理的な方法です。</div>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;">
+      <div style="background:rgba(255,107,26,0.08); border:1.5px solid rgba(255,107,26,0.3); border-radius:12px; padding:14px;">
+        <div style="font-size:10px; font-weight:700; color:var(--primary-light); margin-bottom:6px;">OPTION A</div>
+        <div style="font-size:14px; font-weight:900; color:var(--text); margin-bottom:6px;">S&amp;P500</div>
+        <div style="font-size:11px; color:var(--text2); line-height:1.6;">米国トップ500社に投資。過去30年の平均年利約10%。ブレはあるが長期では右肩上がり。</div>
+      </div>
+      <div style="background:rgba(59,130,246,0.08); border:1.5px solid rgba(59,130,246,0.3); border-radius:12px; padding:14px;">
+        <div style="font-size:10px; font-weight:700; color:#7DB9F5; margin-bottom:6px;">OPTION B</div>
+        <div style="font-size:14px; font-weight:900; color:var(--text); margin-bottom:6px;">全世界株式<br><span style="font-size:11px; font-weight:400;">（オルカン）</span></div>
+        <div style="font-size:11px; color:var(--text2); line-height:1.6;">世界約50カ国に分散投資。米国偏りが不安な人向け。リスクをより分散したい場合はこちら。</div>
+      </div>
+    </div>
+    <div style="font-size:11px; color:var(--text2); background:rgba(255,255,255,0.03); border-radius:8px; padding:10px; line-height:1.7;">
+      💡 どちらでもOK。迷ったらS&P500。両方買う必要はない。<br>
+      おすすめ商品：eMAXIS Slim 米国株式(S&amp;P500) / eMAXIS Slim 全世界株式(オール・カントリー)
+    </div>
+  </div>
+
+  <!-- SECTION 3: 月々の積立額 -->
+  <div class="rm-section">
+    <div class="rm-section-num">3</div>
+    <div>
+      <div class="rm-section-title">月々いくら積み立てるか決める</div>
+      <div class="rm-section-sub">シミュレーターの結果をそのまま使う</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="step-item">
+      <div class="step-dot"></div>
+      <div class="step-body">
+        <div class="step-title">「積立 年利5%」の月額を目標にする</div>
+        <div class="step-desc">シミュレーターの「積立 年利5%」欄に表示された金額が、NISAで運用した場合の目安です。いきなりその金額が難しければ、まず半額からスタートして徐々に増やしましょう。</div>
+        <div class="step-action">✓ ページ1のシミュレーターで自分の必要月額を確認する<br>✓ 最低でも月3,000円から始める（金額より「始めること」が大事）<br>✓ 毎月自動積立に設定すれば考える必要なし</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-dot"></div>
+      <div class="step-body">
+        <div class="step-title">口座開設の手順（SBI証券 or 楽天証券）</div>
+        <div class="step-action">① ネット証券（SBI / 楽天）でNISA口座を開設（本人確認書類が必要）<br>② 「つみたて投資枠」を選択<br>③ eMAXIS Slim S&P500 または オルカンを選ぶ<br>④ 毎月の積立金額を設定してクレジットカード払いに設定<br>⑤ あとは放置でOK</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q&A -->
+  <div class="rm-section">
+    <div class="rm-section-num">Q</div>
+    <div>
+      <div class="rm-section-title">よくある質問</div>
+      <div class="rm-section-sub">みんなが迷うポイントをまとめました</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:14px;">
+      <div style="font-size:13px; font-weight:900; color:var(--primary-light); margin-bottom:8px;">Q. 親のNISAと子どものNISA、どちらを優先すべき？</div>
+      <div style="font-size:12px; color:var(--text2); line-height:1.8;">
+        <b style="color:var(--text)">A. 基本は親のNISAを先に埋めるのが正解です。</b><br>
+        現時点で子ども専用のNISA制度はありません。親のNISA（年間360万円枠）を使って教育費を積み立てる方が、非課税枠が大きく有利です。将来、子どもNISAが創設された時点で移行を検討しましょう。
+      </div>
+    </div>
+    <div style="border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:14px;">
+      <div style="font-size:13px; font-weight:900; color:var(--primary-light); margin-bottom:8px;">Q. 子ども名義の口座を事前に作っておく必要がある？</div>
+      <div style="font-size:12px; color:var(--text2); line-height:1.8;">
+        <b style="color:var(--text)">A. 今すぐ必要はありませんが、作っておくと後で楽です。</b><br>
+        現在は親のNISAで運用するため子ども名義口座は不要。ただし将来的に子どもNISAが始まった際にスムーズに移行できるよう、証券口座（未成年口座）を事前に開設しておくと安心です。未成年口座は親権者が代わりに開設できます。
+      </div>
+    </div>
+    <div>
+      <div style="font-size:13px; font-weight:900; color:var(--primary-light); margin-bottom:8px;">Q. 今年中にやれる準備・対策はある？</div>
+      <div style="font-size:12px; color:var(--text2); line-height:1.8;">
+        <b style="color:var(--text)">A. 今すぐできることが3つあります。</b><br>
+        <br>
+        ① <b style="color:var(--text)">NISA口座を開設する</b>（まだの人は最優先）<br>
+        口座開設に2〜3週間かかります。早めに動くほど運用開始が早まります。<br><br>
+        ② <b style="color:var(--text)">毎月の積立設定を入れる</b><br>
+        少額でも今すぐスタート。1日でも早く始めた方が複利の恩恵が大きくなります。<br><br>
+        ③ <b style="color:var(--text)">子ども名義の証券口座を開設しておく</b><br>
+        将来の制度変更に備えて、SBIまたは楽天で未成年口座を作っておきましょう。
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,rgba(255,107,26,0.15),rgba(255,107,26,0.05)); border:1.5px solid rgba(255,107,26,0.35); border-radius:16px; padding:20px; margin-bottom:14px; text-align:center;">
+    <div style="font-size:12px; color:var(--primary-light); font-weight:700; margin-bottom:8px; letter-spacing:0.5px;">NEXT STEP</div>
+    <div style="font-size:17px; font-weight:900; color:var(--text); line-height:1.5; margin-bottom:10px;">シミュレーションしてみたけど<br>一人では難しそう…という方へ</div>
+    <div style="font-size:12px; color:var(--text2); line-height:1.8; margin-bottom:14px;">
+      お子さんの教育費・老後・住宅など<br>
+      ライフプラン全体から一緒に考えたい方は<br>
+      インスタのDMに <b style="color:var(--primary-light)">「ライフプラン」</b> と送ってください
+    </div>
+    <div style="font-size:11px; color:var(--text2); background:rgba(255,255,255,0.05); border-radius:8px; padding:8px 12px; display:inline-block;">
+      📩 @tatsu_m0ney_dream にDM
+    </div>
+  </div>
+
+  <div style="text-align:center; font-size:11px; color:var(--text2); padding:20px 0 8px;">
+    ※ 本ガイドは情報提供を目的としており、投資を勧誘するものではありません。<br>
+    投資にはリスクが伴います。詳しくはFPへの相談をおすすめします。
+  </div>
+
+</div>
+
+
 
 <script>
 const COSTS = {
@@ -567,6 +735,12 @@ const STRATEGY_DESC = {
   3: '新NISAなどで年利3%程度を想定した堅実な運用。300万円が10年で約404万円になる計算です。',
   5: '株式インデックス投資などで年利5%を想定した積極運用。300万円が10年で約489万円になる計算です。'
 };
+
+function switchTab(idx) {
+  document.querySelectorAll('.tab-btn').forEach((t, i) => t.classList.toggle('active', i===idx));
+  document.querySelectorAll('.page').forEach((p, i) => p.classList.toggle('active', i===idx));
+  window.scrollTo(0, 0);
+}
 
 function handleSave() {
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
