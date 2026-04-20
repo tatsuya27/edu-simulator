@@ -535,7 +535,10 @@
       </div>
     </div>
 
-    <button class="print-btn" onclick="window.print()">📄 結果を印刷・PDFで保存する</button>
+    <button class="print-btn" onclick="handleSave()">📄 結果を保存する</button>
+  <div id="save-hint" style="display:none; font-size:11px; color:var(--text2); text-align:center; margin-top:8px; line-height:1.7; padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">
+    iOSの場合：画面下の「共有」ボタン → 「PDFとして書き出す」または「ファイルに保存」をタップしてください
+  </div>
   </div>
 </div>
 
@@ -564,6 +567,16 @@ const STRATEGY_DESC = {
   3: '新NISAなどで年利3%程度を想定した堅実な運用。300万円が10年で約404万円になる計算です。',
   5: '株式インデックス投資などで年利5%を想定した積極運用。300万円が10年で約489万円になる計算です。'
 };
+
+function handleSave() {
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    document.getElementById('save-hint').style.display = 'block';
+    window.scrollTo(0, document.body.scrollHeight);
+  } else {
+    window.print();
+  }
+}
 
 function updateMonthlyTotal() {
   const inputs = document.querySelectorAll('.child-monthly');
