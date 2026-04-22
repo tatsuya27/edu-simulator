@@ -272,16 +272,6 @@
   .ref-table tbody tr:last-child td { border-bottom: none; }
   .ref-table .num { text-align: right; font-variant-numeric: tabular-nums; }
   .ref-note { font-size: 10px; color: var(--text2); margin-top: 8px; line-height: 1.6; }
-  .cost-summary-wrap { background: #1a1a2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 20px 18px; margin-bottom: 16px; }
-  .cost-summary-headline { font-size: 15px; font-weight: 700; color: #e0e0e0; text-align: center; margin-bottom: 16px; line-height: 1.5; }
-  .cost-summary-amount { font-size: 22px; color: #fff; display: block; margin-top: 4px; letter-spacing: 0.02em; }
-  .cost-summary-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .cost-summary-table thead th { padding: 8px 10px; color: rgba(255,255,255,0.4); font-weight: 500; font-size: 11px; border-bottom: 1px solid rgba(255,255,255,0.08); text-align: left; }
-  .cost-summary-table thead th:last-child { text-align: right; }
-  .cost-summary-table tbody td { padding: 10px 10px; color: #c8c8d4; border-bottom: 1px solid rgba(255,255,255,0.05); }
-  .cost-summary-table tbody td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
-  .cost-summary-total td { color: #fff !important; font-weight: 700; font-size: 14px; border-top: 1px solid rgba(255,255,255,0.15); border-bottom: none !important; padding-top: 12px !important; }
-  .cost-summary-note { font-size: 10px; color: rgba(255,255,255,0.3); margin-top: 12px; text-align: center; }
 
   /* ===== PRINT BTN ===== */
   .print-btn {
@@ -481,24 +471,6 @@
     <div class="strategy-desc" id="strategy-desc">
       貯金口座に置いたまま。元本は保証されますが、物価上昇の影響を受けやすいです。
     </div>
-  </div>
-
-  <div class="cost-summary-wrap">
-    <div class="cost-summary-headline">子育てには<span class="cost-summary-amount">2,000万円以上</span>かかります</div>
-    <table class="cost-summary-table">
-      <thead>
-        <tr><th>段階</th><th>期間</th><th>費用目安</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>幼稚園</td><td>3年</td><td>158万円</td></tr>
-        <tr><td>小学校</td><td>6年</td><td>1,000万円</td></tr>
-        <tr><td>中学校</td><td>3年</td><td>430万円</td></tr>
-        <tr><td>高校</td><td>3年</td><td>315万円</td></tr>
-        <tr><td>大学</td><td>4年</td><td>425万円〜</td></tr>
-        <tr class="cost-summary-total"><td colspan="2">合計</td><td>2,328万円〜</td></tr>
-      </tbody>
-    </table>
-    <div class="cost-summary-note">※ 私立に通った場合の概算。学校・家庭により異なります。</div>
   </div>
 
   <button class="ref-toggle" id="ref-toggle-btn" onclick="toggleRef()">
